@@ -21,7 +21,9 @@ Step 1 should result in X
 
 After the steps are executed, command `something` should return `something else`
 
-Image of result: ![test result](https://github.com/qtumproject/qtum-itds/raw/master/images/add_file.png)
+Image of result: 
+
+![test result](https://github.com/qtumproject/qtum-itds/raw/master/images/add_file.png)
 
 ## References
 
