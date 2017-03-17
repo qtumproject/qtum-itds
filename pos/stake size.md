@@ -39,6 +39,6 @@ Connect to the network and mine blocks. Wait until the consensus protocol is swi
 
 ## Expected Results
 
-Step 3 should result in showing block info.
-Step 4 should result in showing transaction info.
+Step 3 should result in showing block info.  
+Step 4 should result in showing transaction info.  
 Step 5 should show that the output contain 1 entry.

@@ -34,5 +34,5 @@ Connect to the network and mine blocks. Wait until the consensus protocol is swi
 
 ## Expected Results
 
-Step 2 should result in showing block info.
+Step 2 should result in showing block info.  
 Step 3 should show that `signature` field exist in PoS blocks.

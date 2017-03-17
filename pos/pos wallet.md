@@ -16,5 +16,5 @@ Connect to the network and mine blocks. Wait until the consensus protocol is swi
 
 ## Expected Results
 
-Step 4 should result in showing that the Overview-screen contains label for coins involved into the staking.
+Step 4 should result in showing that the Overview-screen contains label for coins involved into the staking.  
 Step 5 should result in `stake + available = total`

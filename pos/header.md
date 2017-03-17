@@ -38,7 +38,7 @@ PoS blocks for checking need to be mined.
 
 ## Expected Results
 
-Step 2 should result in showing the block's header.
-Step 3 should result in `nonce = 0` because `nonce` is not used.
-Step 4 should result in `flags = proof-of-stake` to confirm that the block is PoS-block.
+Step 2 should result in showing the block's header.  
+Step 3 should result in `nonce = 0` because `nonce` is not used.  
+Step 4 should result in `flags = proof-of-stake` to confirm that the block is PoS-block.  
 Step 5 should show that `entropybit` and `modifier` exist in PoS-block.

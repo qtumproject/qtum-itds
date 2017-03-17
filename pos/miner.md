@@ -38,5 +38,5 @@ Connect to the network and mine blocks. Wait until the consensus protocol is swi
 
 ## Expected Results
 
-1. When step 1 is done, step 2 should result in normal CPU usage and blocks will be mined.
+1. When step 1 is done, step 2 should result in normal CPU usage and blocks will be mined.  
 2. When stem 4 is done, step 5 should result in normal CPU usage and blocks will not be mined.

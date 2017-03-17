@@ -16,7 +16,7 @@ Connect to the network and mine blocks. Wait until the consensus protocol is swi
 
 ## Expected Results
 
-Step 2 should result in showing the difficulty for PoW and PoS blocks.
-Step 3 should mine new block.
-Step 4 should result in showing the difficulty after new block is mined.
+Step 2 should result in showing the difficulty for PoW and PoS blocks.  
+Step 3 should mine new block.  
+Step 4 should result in showing the difficulty after new block is mined.  
 Step 5 should show that the `difficulty_1 != difficulty_2`

@@ -20,6 +20,6 @@ Regardless of the starting difficulty for mining the network will adjust the dif
 
 ## Expected Results
 
-Step 8 should result in average time close to 128 seconds.
+Step 8 should result in average time close to 128 seconds.  
 The same result is expected for checks for PoW and PoS consensus protocols.
 
