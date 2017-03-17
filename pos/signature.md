@@ -8,7 +8,7 @@ Connect to the network and mine blocks.
 
 ## TEST STEPS
 
-1 .Start `qtumd`
+1. Start `qtumd`
 2. Get PoW block `qtum-cli getblock <block hash>`
 3. Check if there is `signature`
 
@@ -28,7 +28,7 @@ Connect to the network and mine blocks. Wait until the consensus protocol is swi
 
 ## TEST STEPS
 
-1 .Start `qtumd`
+1. Start `qtumd`
 2. Get PoS block `qtum-cli getblock <block hash>`
 3. Check that there is `signature`
 
