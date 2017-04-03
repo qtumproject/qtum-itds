@@ -44,6 +44,7 @@ Rules:
 * The first vout of the staking transaction must output 0 coins and have an empty script
 * A staking transaction is defined as a transaction that contains at least 1 non-null vin, at least 2 vouts, with the first vout being empty. 
 * No other staking transaction can exist in the block
+* the blocktime must have the bottom 4 bits set to 0. (this is referred to as a "mask") This decreases the granularity of timestamps and thus decreases how often the kernel hash can be changed in the current block.
 
 Note that the stake modifier is not signed or hashed as part of the block header. It is displayed in the RPC interface as if it is, but it is not serialized into the block data that is sent over the P2P network. It is computed when adding a new block to the block index in the wallet. 
 
