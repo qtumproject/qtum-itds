@@ -18,6 +18,6 @@ Connect to the network and have enough matured coins.
 
 ## Expected Results
 
-Steps 2, 3, 4 and 5 should result in Reserve balance set to 0.
-Step 6 should result in Reserve Balance set to `<value>`
+Steps 2, 3, 4 and 5 should result in Reserve balance set to 0.  
+Step 6 should result in Reserve Balance set to `<value>`  
 Step 7 should result in only showing Reserve Balance.

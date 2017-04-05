@@ -28,7 +28,7 @@ Check how reservebalance work.
 Set reserve balance with some of the three possible ways:
  1. Set in `qtum.conf` `reservebalance=<value>` before starting `qtum-qt` or
  2. Start  `qtum-qt -reservebalance=<value>` or
- 3. Call `reservebalance true <value>` from Console in Help-dialog after starting `qtum-qt`
+ 3. Call `reservebalance true <value>` from Console in Help-dialog after starting `qtum-qt`  
 Connect to the network and mine blocks. Wait until the consensus protocol is switched to PoS.
 
 ## Test Steps
