@@ -45,6 +45,11 @@ Rules:
 * A staking transaction is defined as a transaction that contains at least 1 non-null vin, at least 2 vouts, with the first vout being empty. 
 * No other staking transaction can exist in the block
 * the blocktime must have the bottom 4 bits set to 0. (this is referred to as a "mask") This decreases the granularity of timestamps and thus decreases how often the kernel hash can be changed in the current block.
+* The fStake field in the block header must be 0 for PoW, and 1 for PoS
+* prevoutStake (txid and vout number) in the block header must exactly match prevout in the staking transaction
+* nStakeTime in the block header must exactly match txPrev.nTime 
+
+
 
 Note that the stake modifier is not signed or hashed as part of the block header. It is displayed in the RPC interface as if it is, but it is not serialized into the block data that is sent over the P2P network. It is computed when adding a new block to the block index in the wallet. 
 
@@ -54,7 +59,7 @@ stake modifier: sha256(blockHash << previousStakeModifier)
 difficulty: appropriate PoW difficulty
 signature: 0 or not displayed
 block hash: sha256(nVersion << hashPrevblock << hashMerkleRoot << nTime << nBits << nNonce)
-coinbaseFlags: 0 or empty
+coinbaseFlags: block height (BIP34)
 
 
 Block B's info should be capable of being manually calculated as so: 
@@ -64,8 +69,12 @@ kernel hash: sha256(previousStakeModifier << txPrev.nTime << prevout.hash << pre
 difficulty: minimum PoS difficulty
 reward: 4 coins
 block hash: sha256(nVersion << hashPrevblock << hashMerkleRoot << nTime << nBits << nNonce)
-signature: a valid signature of the block hash matching the public key in stakeVout.script
+signature: a valid signature of the block hash matching the public key in stakeVout.script. Signature should be included in the hash but set to 0
 coinbaseFlags: block height
+prevoutStake.txid = prevout.hash
+prevoutStake.n = prevout.n
+nStakeTime = txPrev.nTime
+
 
 Block C's PoS info should be calculated as so:
 
@@ -74,14 +83,19 @@ kernel hash: sha256(previousStakeModifier << txPrev.nTime << prevout.hash << pre
 difficulty: half of the minimum PoS difficulty
 reward: 4 coins
 block hash: sha256(nVersion << hashPrevblock << hashMerkleRoot << nTime << nBits << nNonce)
-signature: a valid signature of the block hash matching the public key in stakeVout.script
+signature: a valid signature of the block hash matching the public key in stakeVout.script. Signature should be included in the hash but set to 0
 coinbaseFlags: block height
-
+prevoutStake.txid = prevout.hash
+prevoutStake.n = prevout.n
+nStakeTime = txPrev.nTime
 
 Notes:
 
 * The genesis block's stake modifier is 0.
 * Block hash may be slightly different with needed EVM support fields
+* Kernel hash is referred to as "hashProof" in Qtum code
+* Instead of kernel.cpp, it is pos.cpp in Qtum
+* Block reward might be different with our final parameters, but the important thing is that the PoS block reward is constant
 
 ## References
 
