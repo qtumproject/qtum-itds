@@ -58,18 +58,18 @@ The test can be executed in any network.
 ## Test Steps
 
  1. Start`qtum-qt -reservebalance=500`
- 2. Check that the reserve balance in `optionsdialog` and RCP call `reservebalance` is 500
+ 2. Check that the reserve balance in `optionsdialog` and RPC call `reservebalance` is 500
  3. Change the reserve balance in the `optionsdialog` or the RPC call `reservebalance true 1000` to 1000
  4. Restart the Qt Wallet `qtum-qt -reservebalance=500`
- 5. Check that the reserve balance in `optionsdialog` and RCP call `reservebalance` is 500
+ 5. Check that the reserve balance in `optionsdialog` and RPC call `reservebalance` is 500
  6. Start`qtum-qt`
- 7. Check that the reserve balance in `optionsdialog` and RCP call `reservebalance` is 0
+ 7. Check that the reserve balance in `optionsdialog` and RPC call `reservebalance` is 0
  8. Change the reserve balance in the `optionsdialog` to 1000 
  9. Restart the Qt Wallet `qtum-qt`
- 10. Check that the reserve balance in `optionsdialog` and RCP call `reservebalance` is 1000
+ 10. Check that the reserve balance in `optionsdialog` and RPC call `reservebalance` is 1000
  11. Change the reserve balance using the RPC call `reservebalance true 500` to 500
  12. Restart the Qt Wallet `qtum-qt`
- 13. Check that the reserve balance in `optionsdialog` and RCP call `reservebalance` is 1000
+ 13. Check that the reserve balance in `optionsdialog` and RPC call `reservebalance` is 1000
 
 ## Expected Results
 
